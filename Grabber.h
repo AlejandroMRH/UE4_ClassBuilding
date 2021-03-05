@@ -28,7 +28,7 @@ protected:
 private:
 
 	float Reach = 100.f;
-
+	
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
 
@@ -37,4 +37,10 @@ private:
 	void FindPhysicsHandleFunc();
 	void SetupInputComponentFunc();
 	FHitResult GetFirstPhysicBodyInReachFunc() const;
+
+	//return line trace end
+	FVector GetPlayerReach() const;
+
+	//Get Player location IN world
+	FVector GetPlayerWorldPos() const;
 };
